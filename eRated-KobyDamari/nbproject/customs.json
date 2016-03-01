@@ -1,0 +1,14 @@
+{
+    "elements": {
+        "lx-text-field": {},
+        "lx-date-picker": {}
+    },
+    "attributes": {
+        "flex-container": {
+            "context": "div"
+        },
+        "flex-item": {
+            "context": "div"
+        }
+    }
+}

@@ -1,0 +1,212 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+#widget{
+    width:100%;
+    height:234px;
+}
+@media screen and (max-width: 1000px){
+    #widget article{
+        float: none !important;
+        display: block !important;
+    }
+}
+#widget article{
+    background-color: #f6f6f6;
+    width: 324px;
+    float: left;
+    display: inline;
+    border-top: 10px solid #f4af01;
+    padding-bottom: 6px;
+}
+#userImg{
+    width: 84px;
+    margin-top: 3px;
+    border: 3px solid #fff;
+    border-radius: 50%; 
+}
+.zIndex9{
+    z-index: 9;
+}
+.zIndex10{
+     z-index:10;
+}
+#reputionSection{
+    height: 84px;
+    width: 54px;
+    border: 1px solid #f4c971;
+    margin-top: 2px;
+    border-radius: 64px;
+    margin-left: -13px;
+}
+.Precentage{
+    text-align: center;
+    color: #f4c971;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-weight: 600;
+    margin-top: 23px;  
+}
+.PrecentageSecondy{
+    text-align: center;
+    color: #a3a3a3;
+    font-weight: 100;
+    margin-top: -5px;
+    margin-left: -7px;
+}
+.topSeller{
+    float: right;
+    margin-right: 0px;
+    padding-right: 0px;
+    margin-top: 5px;
+}
+.displayName{
+    font-weight: 600;
+    margin-top: 0;
+    font-size: 18px;
+    color: #565656;
+    margin-left: 15px;
+    margin-bottom:0px;
+    display:block;
+    float:left;
+}
+.displayNameSecondry{
+    margin-left: 15px;
+    color: #565656;
+    margin-top: 2px;
+    display:block;
+    float:left;
+}
+.socialContainer{
+    text-align: center;
+    margin: 0 auto;
+    background: #fff;
+    width: 99%;
+    margin-bottom: 5px;
+}
+.socialContainer img{
+   width:30px;
+}
+#clear{
+    clear:both;
+}
+.SocialNum{
+    display: block;
+    color: #363636;
+    font-weight: 600;
+}
+.socialContainer section {
+    width:33%;
+    float:left;
+}
+.borderLeft{
+        border-left: 1px solid #ededed;
+}
+.tab{
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    background-color: #f1f1f1;
+    border-bottom: #eaeaea 1px solid;
+    cursor:pointer;
+}
+.tab--active{
+    background-color: #f7f7f7;
+    border: none;
+}
+.marketScore{
+    margin-top:17px;
+}
+.marketScore img{
+    background: #F4B100;
+    width: 38px;
+    float: left;
+    margin: 2px 2px;
+    margin-left: 16px;
+}
+.marketScore span{
+    font-weight: 600;
+    margin-top: 0;
+    font-size: 40px;
+    color: #7c7c7c;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    float: left;
+}
+.barName{
+    margin-left: 9px;
+    float: left;
+    color: #bcbcbc;
+}
+.barcontiner{
+    width: 50%;
+    background: #e0e0e0;
+    height: 14px;
+    float: right;
+    margin-top: 7px;
+    border-radius: 12%;
+    margin-right: 7px;
+}
+.noneStarBar{
+    background: #f4af01;
+    width: 0%;
+    height: 14px;
+    border-radius: 12%;
+}
+.twoStarBar{
+    background: #f4af01;
+    width: 40%;
+    height: 14px;
+    border-radius: 12%;
+}
+.threeStarBar{
+    background: #f4af01;
+    width: 60%;
+    height: 14px;
+    border-radius: 12%;
+}
+.fourStarBar{
+    background: #f4af01;
+    width: 80%;
+    height: 14px;
+    border-radius: 12%;
+}
+.fiveStarBar{
+    background: #f4af01;
+    width: 100%;
+    height: 14px;
+    border-radius: 12%;
+}
+.marginleft{
+    margin-left:18px;
+}
+.numOfTrans{
+    color:#5d5d5d;
+    line-height: 31px;
+}
+.statiscsRow{
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+#reviews ul{
+        list-style: none;
+}
+#reviews li:before{
+    content: 'O';
+    color: #f4af01;
+    margin-right: 5px;
+}
+#reviews li{
+    color:#acacac;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+#reviews h2{
+    color: #828282;
+    margin-left: 21px;
+    font-weight: 100;
+    font-size: 30px;
+    margin-top: 10px;
+}

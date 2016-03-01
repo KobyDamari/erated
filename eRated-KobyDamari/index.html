@@ -1,0 +1,122 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="getJob">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+        <!-- Grid CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <!-- Head -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+        <!-- load angular and angular route via CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.js"></script>
+
+            
+        <!--  CSS -->
+        <link rel="stylesheet" href="css/index.css">
+        
+        
+        <!-- Controllers -->
+        <script src="js/controller/app.js"></script>
+        <script src="js/controller/config.js"></script>
+        <script src="js/controller/mini-plugin.js"></script>
+    </head>
+      <body ng-controller="mini-plugin">
+          <main id="widget">
+              <article>
+                  <div class="row">
+                      <div class="col-md-3 col-xs-3 zIndex10">
+                          <img ng-src="{{User.userImg}}" id="userImg">
+                      </div>
+                        <div class="col-md-3 col-xs-3 zIndex9" id="reputionSection">
+                            <h3 class="Precentage">{{User.rating}} %</h3>
+                            <h3 class="PrecentageSecondy">Positive</h3>
+                      </div>
+                      <div class="col-md-3 col-xs-3 topSeller" ng-show="User.isTop==1">
+                          <img src="images/dhgicon.png">
+                      </div>
+                  </div>
+                  <div id='clear'></div>
+                  <div class="row">
+                      <p class="displayName">
+                          {{User.displayName}}
+                      </p>
+                        <p class="displayNameSecondry">
+                         {{User.rating}} % positve feedback
+                      </p>
+                  </div>
+                  <div id="clear"></div>
+                  <div class="row socialContainer">
+                      <section ng-show="User.isFacebookExists!=0">
+                          <img src="images/facebook.svg"> 
+                          <span class="SocialNum">{{User.faceBookConnection}}</span>
+                          <span>Freinds</span>
+                          
+                      </section>
+                      <section ng-show="User.islinkdinExists!=0">
+                          <img src="images/linkedin.svg"> 
+                          <div class="borderLeft">
+                            <span class="SocialNum">{{User.linkedinConnection}}</span>
+                            <span>Connections</span>
+                          </div>
+                      </section>
+                      <section >
+                           <img src="images/twitter.svg"> 
+                           <div class="borderLeft">
+                            <span class="SocialNum">{{User.twitterConnection}}</span>
+                            <span>Followers</span>
+                           </div>
+                      </section>
+                      <div id="clear"></div>
+                  </div>
+              </article>
+              <article>
+                  <div id="clear"></div>
+                  <div class="row marketsRow">
+                      <div  ng-click='setCurrentTab(0)' ng-class="{'tab tab--active': currentTab == 0,'tab': currentTab != 0}" class="tab tab--active">
+                         <img src="images/dhgatelogo.png">  
+                      </div>
+                      <div  ng-click='setCurrentTab(1)' ng-click='setCurrentTab(0)'ng-class="{'tab tab--active': currentTab == 1,'tab': currentTab != 1}">
+                          <img src="images/ebaygrey.png"> 
+                      </div>
+                      <div  ng-click='setCurrentTab(2)' ng-class="{'tab tab--active': currentTab == 2,'tab': currentTab != 2}">
+                          <img src="images/etsygrey.png"> 
+                      </div>
+                  </div>
+                  <div id="clear"></div>
+                  <div class="row marketScore">
+                          <span>{{CurrentTab.marketScore}}</span>
+                          <img src='images/star.png' class='star' ng-repeat="t in getTimes(CurrentTab.marketScore) track by $index">
+                </div>
+                  <div id='clear'></div>
+                  <div class='row '>
+                      <div class=' marginleft'>
+                              <span class='numOfTrans'>Number of Transction made : number</span>
+                      </div>
+                  </div>
+                  <div id='clear'></div>
+                  <div class='barsSection'>
+                      <div  class='row statiscsRow'ng-repeat="bar in CurrentTab.scoreInfo">
+                          <span class='barName marginleft'>
+                              {{bar.name}}
+                          </span>
+                          <div class='barcontiner'>
+                              <div ng-class="{'noneStarBar':bar.score=0,'oneStarBar':bar.score=20,'twoStarBar':bar.score=40,'threeStarBar':bar.score=60,'fourStarBar':bar.score=80,'fiveStarBar':bar.score=100}"></div>
+                          </div>
+                      </div>
+                  </div>
+              </article>
+              <article id='reviews'>
+                  <h2>Reviews</h2>
+                  <ul  ng-repeat='review in CurrentTab.marketReviews'>
+                      <li>{{review.review_content}}</li>
+                  </ul>
+              </article>
+          </main>
+
+
+     </body>
+</html>
